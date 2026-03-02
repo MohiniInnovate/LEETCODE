@@ -18,7 +18,7 @@ class Solution:
             if src in visit:
                 continue
             visit.add(src)
-            res = max(res, w1)
+            res = w1
             for v, w2 in mat[src]:
                 if v not in visit:
                     heapq.heappush(q, (w2 + w1, v))
