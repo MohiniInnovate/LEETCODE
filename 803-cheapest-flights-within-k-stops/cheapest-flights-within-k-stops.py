@@ -9,7 +9,7 @@ class Solution:
         visit = set()
         
         while q:
-            p1, st, s1 = heapq.heappop(q)
+            st, p1, s1 = heapq.heappop(q)
             if s1 == dst:
                 res = min(res, p1)
                 continue
@@ -18,7 +18,7 @@ class Solution:
             visit.add((s1, st))
             for t1, p2 in mat[s1]:
                 if  (t1, st + 1) not in visit:
-                    heapq.heappush(q, (p2 + p1, st + 1, t1))
+                    heapq.heappush(q, ( st + 1, p2 + p1, t1))
         return res if res != float('inf') else -1
 
             
