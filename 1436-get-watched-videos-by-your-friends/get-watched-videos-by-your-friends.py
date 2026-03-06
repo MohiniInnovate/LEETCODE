@@ -24,8 +24,7 @@ class Solution:
                 if a not in visit:
                     q.append((a, d + 1 ))
                     visit.add(a)
-        while ans:
-            n = ans.pop()
+        for n in ans:
             for c in watchedVideos[n]:
                 if c in freq:
                     freq[c] += 1
