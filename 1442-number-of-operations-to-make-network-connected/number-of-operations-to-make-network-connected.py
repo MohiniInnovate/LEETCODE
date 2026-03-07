@@ -7,7 +7,7 @@ class Solution:
             p = par[c]
 
             while p != par[p]:
-                p = par[p]
+                p = par[par[p]]
             return p
         
         def union(n1, n2):
