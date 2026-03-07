@@ -21,7 +21,6 @@ class Solution:
                     par[p1] = p2
                     size[p2] += size[p1]
 
-        nodes = set()
 
         for a,b in connections:
             union(a,b)
