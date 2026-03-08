@@ -13,10 +13,10 @@ class Solution:
             q = [(0, n)]
             dist = [float('inf')] * (n+1)
             dist[n] = 0
-
+            
             while q:
                 d, u = heappop(q)
-                
+                if d != dist[u]: continue
                 for w, v in graph[u]:
                     if dist[v] > dist[u] + w:
                         dist[v] = dist[u] + w
