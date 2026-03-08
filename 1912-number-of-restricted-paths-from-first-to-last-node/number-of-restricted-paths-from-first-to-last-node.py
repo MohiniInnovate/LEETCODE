@@ -16,7 +16,7 @@ class Solution:
 
             while q:
                 d, u = heappop(q)
-                if d != dist[u]: continue
+                
                 for w, v in graph[u]:
                     if dist[v] > dist[u] + w:
                         dist[v] = dist[u] + w
@@ -35,12 +35,5 @@ class Solution:
         dist = dijkstra()
         return dfs(1)
 
-'''def dfs(src):
-            if src == n:
-                return 1
-            ans = 0
-            for  _, nei in graph[src]:
-                if dist[src] > dist[nei]:
-                    ans = (ans + dfs(nei)) % 1000000007
-            return ans'''
+
 
