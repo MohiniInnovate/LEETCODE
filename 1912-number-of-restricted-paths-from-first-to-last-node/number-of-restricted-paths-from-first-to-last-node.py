@@ -16,7 +16,7 @@ class Solution:
             
             while q:
                 d, u = heappop(q)
-                if d != dist[u]: continue
+                
                 for w, v in graph[u]:
                     if dist[v] > dist[u] + w:
                         dist[v] = dist[u] + w
