@@ -8,7 +8,7 @@ class Solution:
         def find(n1):
             p = par[n1]
             while p != par[p]:
-                p = par[p]
+                p = par[par[p]]
             return p
 
         def union(a,b):
