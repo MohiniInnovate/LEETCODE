@@ -28,7 +28,8 @@ class Solution:
                     q.append((b, d + 1))
         min_dis = float('inf')
         ans = -1
-        sor_a1 = dict(sorted(ans1.items(), key=lambda x: (x[1], x[0])))
+        sor_a1 = ans1
+        #sor_a1 = dict(sorted(ans1.items(), key=lambda x: (x[1], x[0])))
         for a in sor_a1:
             if a in ans2:
                 max_d = max(sor_a1[a], ans2[a])
