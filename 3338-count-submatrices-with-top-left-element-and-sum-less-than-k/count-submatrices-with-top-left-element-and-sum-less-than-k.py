@@ -1,11 +1,11 @@
 class Solution:
     def countSubmatrices(self, grid: List[List[int]], k: int) -> int:
-        tle = grid[0][0]
+        
         m = len(grid)
         n = len(grid[0])
         ans = [[0] * (n) for _ in range(m) ]
 
-        ans[0][0] = grid[0][0]
+    
 
         for r in range(m):
             curr = 0 
