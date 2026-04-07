@@ -13,9 +13,7 @@ class Solution:
                 if w1 < w2 and h1 < h2 : 
                     res.append(tuple(e))
                 else:
-                    i1 = bisect_left(res, w2, key=lambda x: x[0])
-                    i2 = bisect_left(res, h2, key=lambda x: x[1])
-                    i = min(i1,i2)
+                    i = bisect_left(res, h2, key=lambda x: x[1])
                     res[i] = tuple(e)
         return len(res)
 
