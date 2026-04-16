@@ -1,5 +1,8 @@
 class Solution:
     def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
+        '''1st thing I did was to check if s1's i the character is equal to s3 kth char, if it is I will move to i +1 and k+1
+        2nd thing I was to check the s2 char 
+        this recurssion approach same thing can be done in dp as well'''
         m = len(s1)
         n = len(s2)
         o = len(s3)
